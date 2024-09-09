@@ -1,0 +1,37 @@
+.secaoEmail {
+    width: 100%;
+    padding: 0px 24px;
+    height: 321px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secaoEmail .cotainerEmail {
+    max-width: 729px;
+    border: 2px solid black;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.secaoEmail .cotainerEmail h4 {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.secaoEmail .cotainerEmail h4 span {
+    font-weight: 500;
+}
+
+.secaoEmail .cotainerEmail form {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,31 @@
+.fundo {
+    background-color: var(--preto);
+    color: var(--branco);
+    border-radius: 4px 4px 0px 0px;
+    padding: 18px 28px 18px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.fundo .icone {
+    color: var(--amarelo);
+}
+
+.fundo h5 {
+    width: 568px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.fundo .iconeFechar {
+    color: #6C757D;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .fundo h5 {
+        width: 200px;
+    }
+}

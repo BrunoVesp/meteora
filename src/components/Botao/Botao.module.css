@@ -1,0 +1,13 @@
+.botao {
+    color: var(--branco);
+    background-color: var(--preto);
+    border: 1px solid var(--branco);
+    padding: 9px 12px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.botao:hover {
+    background-color: var(--amarelo);
+    color: var(--preto);
+}

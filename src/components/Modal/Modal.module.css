@@ -1,0 +1,93 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: var(--branco);
+  max-width: 700px;
+  border-radius: 4px;
+}
+
+.containerModal {
+  padding: 16px 16px 32px 32px;
+  display: flex;
+  gap: 16px;
+}
+
+.infosModal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infosModal h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.infosModal .descricao {
+  font-size: 13px;
+  color: #212529;
+  padding-bottom: 32px;
+  border-bottom: 1px solid black;
+}
+
+.infosModal .preco {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.infosModal .apagado {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ADB5BD;
+}
+
+.infosModal form {
+  font-size: 13px;
+}
+
+.infosModal form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.infosModal form div label {
+  font-weight: 700;
+  margin: 12px 0;
+}
+
+.infosModal form div .containerInputs {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.infosModal form div .containerInputs p {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .modal {
+    max-width: 343px;
+  }
+
+  .containerModal {
+    flex-direction: column;
+  }
+
+  .imagemModal {
+    display: none;
+  }
+
+}

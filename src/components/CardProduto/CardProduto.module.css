@@ -1,0 +1,29 @@
+.cardProduto {
+    width: 350px;
+    border: 1px solid #00000021
+}
+
+.cardProduto img {
+    width: 100%;
+}
+
+.cardProduto h3 {
+    padding: 13px 112px 13px 16px;
+    font-size: 16px;
+}
+
+.cardProduto div {
+    padding: 2px 16px 10px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cardProduto div p {
+    font-size: 13px;
+}
+
+.cardProduto div span {
+    font-size: 16px;
+    font-weight: 700;
+}

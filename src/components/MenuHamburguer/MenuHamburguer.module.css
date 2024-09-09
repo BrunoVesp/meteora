@@ -1,0 +1,41 @@
+.icone {
+  color: var(--amarelo);
+  cursor: pointer;
+}
+
+.menuFechado, .menuFechado .icone, .menuFechado ul, .menuFechado li {
+  display: none;
+}
+
+.menuAberto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #343A40;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.menuAberto .icone {
+  align-self: flex-end;
+}
+
+.menuAberto ul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.menuAberto ul li {
+  border-bottom: 1px solid #CED4DA;
+  width: 100%;
+}
+
+.menuAberto ul li:hover {
+  color: var(--amarelo);
+}

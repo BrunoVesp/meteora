@@ -1,0 +1,27 @@
+:root {
+  --branco: #FFFFFF;
+  --preto: #000000;
+  --cinza: #CCCCCC;
+  --amarelo: #DAFF01;
+  --roxo: #9353FF;
+  --salmao: #EE6471;
+  --laranja: #F87F46;
+
+  --fonte: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte);
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ol, ul {
+	list-style: none;
+}

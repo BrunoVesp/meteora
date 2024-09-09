@@ -1,0 +1,29 @@
+.itemInfo {
+    width: 304px;
+    display: flex;
+    gap: 24px;
+}
+
+.itemInfo .textos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.itemInfo .textos h4 {
+    color: var(--amarelo);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.itemInfo .textos p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@media (max-width: 800px) {
+    .itemInfo img {
+        width: 56px;
+        height: 56px;
+    }   
+}
