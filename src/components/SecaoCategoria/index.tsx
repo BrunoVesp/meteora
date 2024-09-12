@@ -2,9 +2,9 @@ import styles from './SecaoCategoria.module.css';
 import Titulo from '../Titulo';
 import CardCategoria from '../CardCategoria';
 import categorias from '../../mocks/categorias.json';
+import CarrinhoLateral from '../CarrinhoLateral';
 
 const SecaoCategoria = () => {
-
     return (
         <section className={styles.categorias}>
             <Titulo texto='Busque por categoria:' />
@@ -16,6 +16,7 @@ const SecaoCategoria = () => {
                         nomeCategoria={categoria.nomeCategoria}
                     />)}
             </div>
+            <CarrinhoLateral/>
         </section>
     )
 }

@@ -1,0 +1,45 @@
+.produto {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    height: 160px;
+    border-bottom: 1px solid var(--cinza);
+}
+
+.imagemCarrinho {
+    width: 110px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 13px;
+    height: 100%;
+}
+
+.conteudo h5 {
+    font-size: 18px;
+}
+
+.conteudo div {
+    display: flex;
+    gap: 8px;
+}
+
+.conteudo div p {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 2px 20px;
+}
+
+.conteudo span {
+    color: var(--amarelo);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.icone {
+    cursor: pointer;
+}

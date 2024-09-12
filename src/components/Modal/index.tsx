@@ -1,12 +1,26 @@
+import { useCarrinho } from '../../hooks/useCarrinho';
 import { useModalContext } from '../../hooks/useModalContext';
 import Botao from '../Botao';
 import HeaderModal from '../HeaderModal';
 import styles from './Modal.module.css';
 
-const Modal = () => {
-    const { estaAberto, itemSelecionado, fecharModal } = useModalContext();
+interface ModalProps {
+    id: number;
+    preco: number
+    imagem: string;
+    nome: string;
+}
 
-    if (!estaAberto || !itemSelecionado) return null;
+const Modal = ({ id, preco, imagem, nome } : ModalProps) => {
+    const { estaAberto, fecharModal, itemSelecionado } = useModalContext();
+
+    const { adicionarAoCarrinho } = useCarrinho();
+
+    const eventoAdicionarAoCarrinho = () => {
+        adicionarAoCarrinho({ id, preco, imagem, nome, quantidade: 1 });
+    }
+
+    if (!estaAberto) return null;
 
     return (
         <div className={styles.modalOverlay} onClick={fecharModal}>
@@ -20,13 +34,13 @@ const Modal = () => {
                 <div className={styles.containerModal}>
                     <img 
                         className={styles.imagemModal} 
-                        src={itemSelecionado.imagem} 
-                        alt={itemSelecionado.nome} 
+                        src={itemSelecionado?.imagem} 
+                        alt={itemSelecionado?.nome} 
                     />
                     <div className={styles.infosModal}>
-                        <h5>{itemSelecionado.nome}</h5>
-                        <p className={styles.descricao}>{itemSelecionado.descricao}</p>
-                        <p className={styles.preco}>R$ {itemSelecionado.preco},00</p>
+                        <h5>{itemSelecionado?.nome}</h5>
+                        <p className={styles.descricao}>{itemSelecionado?.descricao}</p>
+                        <p className={styles.preco}>R$ {itemSelecionado?.preco},00</p>
                         <p className={styles.apagado}>Vendido e entregue por Riachuelo</p>
                         <form>
                             <div>
@@ -52,7 +66,7 @@ const Modal = () => {
                                 </div>
                             </div>
                         </form>
-                        <Botao>Adicionar à sacola</Botao>
+                        <Botao aoClicar={eventoAdicionarAoCarrinho}>Adicionar ao carrinho</Botao>
                     </div>
                 </div>
             </div>

@@ -4,10 +4,12 @@ import styles from './Cabecalho.module.css';
 import Botao from '../Botao';
 import { useEhMobile } from '../../hooks/UseEhMobile';
 import MenuHamburguer from '../MenuHamburguer';
+import { FaShoppingCart } from "react-icons/fa";
+import { useModalContext } from '../../hooks/useModalContext';
 
 const Cabecalho = () => {
+    const { abrirModalCarrinho } = useModalContext();
     const { ehMobile } = useEhMobile();
-
     const [busca, setBusca] = useState('');
 
     return (
@@ -37,6 +39,7 @@ const Cabecalho = () => {
                     aoAlterado={valor => setBusca(valor)}
                 />
                 <Botao>Buscar</Botao>
+                <FaShoppingCart onClick={abrirModalCarrinho} className={styles.icone}/>
             </div>
         </header>
     )

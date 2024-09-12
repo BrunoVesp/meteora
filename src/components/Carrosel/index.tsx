@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './Carrosel.module.css';
 import { useMediaQuery } from 'react-responsive';
+import { MdArrowLeft, MdArrowRight } from "react-icons/md";
 
 const Carrosel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,10 +43,10 @@ const Carrosel = () => {
                 />
             ))}
             <button className={`${styles.arrowButton} ${styles.arrowLeft}`} onClick={goToPrevious}>
-                &#9664;
+                <MdArrowLeft size={60}/>
             </button>
             <button className={`${styles.arrowButton} ${styles.arrowRight}`} onClick={goToNext}>
-                &#9654;
+                <MdArrowRight size={60}/>
             </button>
         </div>
     );

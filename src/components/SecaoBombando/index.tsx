@@ -6,7 +6,7 @@ import { useModalContext } from '../../hooks/useModalContext';
 import Modal from '../Modal';
 
 const SecaoBombando = () => {
-    const { abrirModal } = useModalContext();
+    const { abrirModal, itemSelecionado } = useModalContext();
 
     return (
         <section className={styles.secaoBombando}>
@@ -22,7 +22,13 @@ const SecaoBombando = () => {
                         aoClicar={() => abrirModal(produto)}
                     />
                 )}
-                <Modal />
+                <Modal 
+                    id={itemSelecionado?.id}
+                    imagem={itemSelecionado?.imagem}
+                    nome={itemSelecionado?.nome}
+                    preco={itemSelecionado?.preco}
+                    key={itemSelecionado?.id}
+                />
             </div>
         </section>
     )

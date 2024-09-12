@@ -48,6 +48,19 @@
     gap: 12px;
 }
 
+.cabecalho .busca {
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    width: 350px;
+}
+
+.cabecalho .busca .icone {
+    cursor: pointer;
+    font-size: 45px;
+    margin: 0 16px;
+}
+
 @media (max-width: 800px) {
     .cabecalho {
         padding: 0;
@@ -71,9 +84,14 @@
 
     .cabecalho .busca {
         background-color: var(--branco);
+        color: var(--preto);
         width: 100%;
         padding: 20px;
         justify-content: center;
         align-items: center;
+    }
+
+    .cabecalho .busca .icone {
+        font-size: 35px;
     }
 }

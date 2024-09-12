@@ -1,0 +1,74 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    
+}
+
+.carrinho {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    color: var(--branco);
+    display: flex;
+    flex-direction: column;
+    background-color: #202528;
+    width: 300px;
+    animation: slideIn 0.5s forwards;
+    transform: translateX(100%);
+}
+
+.cabecalho {
+    background-color: var(--roxo);
+    color: var(--branco);
+    padding: 16px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.cabecalho .icone {
+    color: var(--cinza);
+    cursor: pointer;
+}
+
+.carrinhoContainer {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px;
+    transform: translateX(0);
+}
+
+.carrinhoContainer .preco {
+    font-size: 18px;
+    color: var(--amarelo);
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrinhoBotao {
+    cursor: pointer;
+    background-color: var(--roxo);
+    color: var(--branco);
+    border: none;
+    padding: 8px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%); /* Começa fora da tela */
+    }
+    to {
+        transform: translateX(0); /* Move para dentro da tela */
+    }
+}
